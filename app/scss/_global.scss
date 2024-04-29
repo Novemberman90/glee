@@ -1,14 +1,27 @@
+html,
+body {
+  height: 100%;
+}
 body {
   font-size: 16px;
   line-height: 30px;
+  display: flex;
+  flex-direction: column;
 }
-
+button {
+  background-color:transparent;
+  border: none;
+}
+.main {
+  flex-grow: 1;
+}
 .container {
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
 }
-button {
-  background-color:transparent;
-  border: none;
+.container-m {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
