@@ -171,7 +171,7 @@
       }
     }
     &__form-btn {
-      background-color: #a3bbc8;
+      background-color: $grey;
       color: #fff;
       border: none;
       padding: 15px 20px;
@@ -206,6 +206,129 @@
     }
      &__nav-link {
       @extend %footer-fotn-style;
+    }
+  }
+
+
+  .top-slider {
+    &__inner{
+      background-color: #fcd7b6;
+      padding: 90px 0;
+    }
+    &__item{
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      max-width: 470px;
+      font-size: 70px;
+      line-height: 70px;
+      @extend %rubik-500;
+      color: #243f4d;
+      margin-bottom: 50px;
+    }
+    &__text {
+      max-width: 370px;
+      font-size: 18px;
+      color: #436372;
+      @extend %rubik-400;
+      margin-bottom: 85px;
+    }
+ 
+    &__link {
+      display: inline-block;
+      background-color: $grey;
+      @extend %rubik-500;
+      color: #ffffff;
+      padding: 20px 100px 20px 30px;
+      position: relative;
+      &::after {
+        background-image: url('../images/icon/white-arrow.svg');
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 9px;
+        top: 50%;
+        right: 18px;
+        transform: translateY(-50%);
+      }
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      li {
+          padding: 0 10px;
+          line-height: 10px;
+          button {
+            background-color: #fde3cc;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            @extend %rubik-500;
+            font-size: 11px;
+          }
+          &.slick-active {
+            button {
+              background-color: #fff;
+            }
+          }
+
+      }
+    }
+    &__service {
+      background-color: #fef7f0;
+      display: flex;
+      justify-content: space-around;
+      padding: 45px 0;
+    }
+    &__service-item {
+      position: relative;
+      max-width: 300px;
+      &--support {
+        padding-left: 80px;
+        width: 285px;
+      }
+      &--delivery {
+        padding-left: 80px;
+      }
+      &--payment {
+        padding-left: 90px;
+      }
+      &--support::before,
+      &--delivery::before,
+      &--payment::before {
+        position: absolute;
+        content: '';
+        top: 15px;
+        left: 0px;
+      }
+      &--support::before {
+        background-image: url('../images/icon/support.svg');
+        width: 51px;
+        height: 53px;
+      }
+      &--delivery::before {
+        background-image: url('../images/icon/delivery.svg');
+        width: 54px;
+        height: 36px;
+      }
+      &--payment::before {
+        background-image: url('../images/icon/payment.svg');
+        width: 54px;
+        height: 52px;
+      }
+  }
+
+    &__service-title {
+      font-size: 18px;
+      line-height: 40px;
+      @extend %dmsan-700;
+      color: #414141;
+    }
+    &__service-text {
+      color: #585858;
+      @extend %dmsan-500;
     }
   }
 
