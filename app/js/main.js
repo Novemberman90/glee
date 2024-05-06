@@ -5,5 +5,9 @@ $(function() {
     fade: true,
     autoplay: true,
     autoplaySpeed: 2000,
-  })
+  });
+
+
+
+  var mixer = mixitup('.products-week__items');
 });
