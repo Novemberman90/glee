@@ -337,26 +337,7 @@
 .products-week {
   padding: 70px 0 85px;
   &__title {
-    @extend %dmsan-700;
-    font-size: 36px;
-    line-height: 1;
-    text-align: center;
     margin-bottom: 35px;
-  }
-  &__filter {
-    text-align: center;
-    margin-bottom: 80px;
-  }
-  &__filter-btn {
-      @extend %dmsan-700;
-      font-size: 18px;
-      color: #8b8b8b;
-      &.products-week__filter-btn--active {
-        color: #000;
-      }
-      &:hover {
-        color: #000;
-      }
   }
   &__items {
     display: grid;
@@ -364,9 +345,25 @@
     gap: 40px 30px;
   }
 }
+.product-filter {
+  text-align: center;
+  margin-bottom: 80px;
+  &__btn {
+    @extend %dmsan-700;
+      font-size: 18px;
+      color: #8b8b8b;
+    
+      &.product-filter__btn--active {
+        color: #000;
+      }
+    
+      &:hover {
+        color: #000;
+      }
+  }
+}
 
-
-.product-week-item {
+.product-item {
     max-width: 270px;
     text-align: center;
     height: 380px;
@@ -426,7 +423,7 @@
     color: $grey;
   }
   &:hover {
-    .product-week-item__link-box {
+    .product-item__link-box {
       transform: translateY(0);
     }
   }
@@ -508,6 +505,41 @@
   }
 }
 /*luminaire end*/
+
+/* desing strart */
+.desing {
+  padding-top: 100px;
+  &__title {
+    margin-bottom: 35px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 530px;
+    gap: 30px 35px;
+  }
+  &__item {
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-left: 30px;
+    padding-top: 40px;
+  }
+  &__item-link {
+    display: block;
+    color: #1a1a1a;
+    @extend %dmsan-700;
+    font-size: 20px;
+    line-height: auto;
+    max-width: 175px;
+    margin-bottom: 20px;
+  }
+  &__item-subtitle {
+    color: #a9bfcb;
+    @extend %dmsan-700;
+    display: inline-block;
+  }
+}
+
 
 
 

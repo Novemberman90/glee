@@ -25,3 +25,10 @@ button {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.title {
+  @extend %dmsan-700;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+}
