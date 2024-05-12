@@ -8,7 +8,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-function styles() {
+function styles(){
   return src('app/scss/styles.scss')
   .pipe(autoprefixer({ overrideBrowserslist: ['last 10 version'], grid: true, cascade: false})) 
   .pipe(scss({outputStyle: 'compressed'}))
@@ -69,7 +69,7 @@ function cleanDist() {
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/**/*.html']).on('change', browserSync.reload)
 }
 
 exports.styles = styles;
