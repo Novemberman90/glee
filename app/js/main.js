@@ -8,6 +8,15 @@ $(function() {
   });
 
 
+var mixerOne = mixitup('.mixer-1', {
+    controls: {
+        scope: 'local',
+    }
+});
 
-  var mixer = mixitup('.filter-items');
+var mixerTwo = mixitup('.mixer-2', {
+    controls: {
+        scope: 'local',
+    }
+});
 });
