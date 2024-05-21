@@ -560,7 +560,6 @@
 /* video desing end */
 .partners {
   &__list {
-    height: 170px;
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -569,10 +568,13 @@
 
 .articles {
   padding-top: 115px;
+  padding-bottom: 90px;
   background-image: url('../images/artcles-bg.jpg');
   background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: contain;
+  background-position: center bottom;
+  &__inner {
+    margin-bottom: 90px;
+  }
   &__top-title-box {
     display: flex;
     justify-content: space-between;
@@ -612,7 +614,7 @@
     }
   }
   &__item-box {
-    padding: 35px 30px 30px 30px;
+    padding: 30px 30px 25px 30px;
     position: relative;
     background-color: #fff;
   }
@@ -633,13 +635,13 @@
   &__item-link{
     color: #262626;
     font-size: 18px;
-    line-height: normal;
+    line-height: 1;
     @extend %dmsan-500;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     display: block;
   }
   &__item-info {
-    padding-top: 22px;
+    padding-top: 20px;
     border-top: 1px solid #e0e0e0;
     display: flex;
   }
@@ -654,6 +656,7 @@
     @extend %rubik-400;
     position: relative;
     padding-left: 30px;
+    text-transform: uppercase;
     &::before {
       position: absolute;
       content:'';
