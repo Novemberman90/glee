@@ -157,6 +157,9 @@
       @extend %footer-fotn-style;
       line-height: 24px;
     }
+    &__form {
+      display: flex;
+    }
     &__form-input {
       background-color: #fef7f0;
       max-width: 170px;
@@ -554,7 +557,118 @@
 
   }
 }
+/* video desing end */
+.partners {
+  &__list {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+}
 
-
+.articles {
+  padding-top: 115px;
+  background-image: url('../images/artcles-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: contain;
+  &__top-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+  &__title-link {
+    display: inline-block;
+    position: relative;
+    @extend %dmsan-700;
+    font-size: 16px;
+    line-height: 1;
+    padding-right: 15px;
+    &::after {
+      background-image: url('../images/icon/shape-right.svg');
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 11px;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 370px;
+  }
+  &__item-imglink {
+    display: block;
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+  &__item-box {
+    padding: 35px 30px 30px 30px;
+    position: relative;
+    background-color: #fff;
+  }
+  &__item-new {
+    position: absolute;
+    top: -15px;
+    width: 102px;
+    height: 30px;
+    text-align: center;
+    border-radius: 25px;
+    @extend %dmsan-700;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $grey;
+    color: #fff;
+    padding: 5px 13px;
+  }
+  &__item-link{
+    color: #262626;
+    font-size: 18px;
+    line-height: normal;
+    @extend %dmsan-500;
+    padding-bottom: 20px;
+    display: block;
+  }
+  &__item-info {
+    padding-top: 22px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+  }
+  &__item-author {
+    padding-right: 30px;
+  }
+  &__item-date,
+  &__item-author {
+    font-size: 12px;
+    line-height: 30px;
+    color: #5d6269;
+    @extend %rubik-400;
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      position: absolute;
+      content:'';
+      bottom: 10px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__item-date::before {
+    background-image: url('../images/icon/time.svg');
+  }
+  &__item-author::before {
+    background-image: url('../images/icon/user-gray.svg');
+  }
+}
 
 @import 'media';
