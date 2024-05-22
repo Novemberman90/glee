@@ -32,3 +32,39 @@ button {
   line-height: 1;
   text-align: center;
 }
+
+.breacrumbs {
+  display: inline-flex;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    color: #737980;
+    @extend %rubik-500;
+    font-size: 14px;
+    line-height: 24px;
+    padding-right: 20px;
+    position: relative;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 6px;
+      color: #737980;
+      @extend %rubik-500;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &:last-child {
+      color: $grey;
+      /* цвет можно изменть, чтобы выделить последнюю ссылку т.е. страничку ге мы сейчас нахожимся. Даже если последний элемент изменят на спан, то сити будут работать как надо */
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
