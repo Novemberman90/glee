@@ -32,8 +32,9 @@ function scripts () {
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     'app/js/main.js',
-     'node_modules/rateyo/src/jquery.rateyo.js',
    ])
    .pipe(concat('main.min.js'))
    .pipe(uglify())
