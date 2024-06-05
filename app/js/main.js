@@ -1,5 +1,15 @@
 $(function() {
 
+    $('.detail-tabs__top-item').on('click', function (e) {
+      e.preventDefault();
+      $('.detail-tabs__top-item').removeClass('detail-tabs__top-item--active');
+      $(this).addClass('detail-tabs__top-item--active');/* this когда нажму именно на него */
+       $('.detail-tabs__content-item').removeClass('detail-tabs__content-item--active');
+       $($(this).attr('href')).addClass('detail-tabs__content-item--active');
+
+    });
+
+
     $('.detail-item__numb').styler();
 
 
