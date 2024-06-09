@@ -1934,4 +1934,167 @@ display: none;
   }
 }
 
+/* contact */
+.contact {
+  padding: 120px 0 25px;
+  &__subtitle {
+    text-align: center;
+    @extend %popins-700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-size: 35px;
+    line-height: 57px;
+    margin-bottom: 70px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+  }
+  &__item {
+    width: 370px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      border: 3px solid $grey;
+      .contact__item-icon {
+        background-color: $grey;
+        path{
+          fill: #fff;
+        }
+      }
+    }
+  }
+  &__item-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    path {
+      fill: $grey;
+    }
+  }
+  &__item-title {
+    @extend %dmsan-700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+    margin-bottom: 25px;
+  }
+  &__item-link,
+  &__item-link-name {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #61637b;
+    text-align: center
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    width: 625px;
+  }
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    input {
+      width: 300px;
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 30px;
+      color: #77788d;
+      &::placeholder {
+        font-size: 16px;
+        line-height: 30px;
+        color: #77788d;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__form-input {
+    width: 100%;
+    display: block;
+    height: 50px;
+    background-color: #fafafa;
+    border: none;
+    padding: 0 50px 0 20px;
+  }
+  &__form-name-icon,
+  &__form-email-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__form-textarea-label,
+  &__form-input-email,
+  &__form-input-name {
+    position: relative;
+  }
+  &__form-textarea-icon {
+    position: absolute;
+    background-image: url('../images/icon/message-icon.svg');
+    width: 18px;
+    height: 15px;
+    top: 20px;
+    right: 20px;
+  }
+  &__form-textarea {
+    width: 100%;
+    height: 175px;
+    display: block;
+    resize: none;
+    background-color: #fafafa;
+    border: none;
+    padding: 20px 50px 20px 20px;
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #77788d;
+      &::placeholder {
+        font-size: 16px;
+        line-height: 30px;
+        color: #77788d;
+        text-transform: uppercase;
+      }
+  }
+  &__form-btn {
+    margin-top: 30px;
+    padding: 0 44px;
+    background-color: $grey;
+    @extend %popins-700;
+    font-size: 15px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__map {
+    height: 335px;
+    width: 500px;
+    #map {
+      width: 500px;
+      height: 335px;
+    }
+  }
+}
+
+
 @import 'media';
