@@ -1079,6 +1079,9 @@
       margin-left: 15px;
     }
   }
+  &__parination {
+    padding-top: 100px;
+  }
 }
 
 .filter{
@@ -1121,7 +1124,7 @@
     @extend %rubik-400;
     font-size: 14px;
     line-height: 43px;
-    padding: 4px 22px 4px 14px;
+    padding: 0px 22px 0px 14px;
     border-radius: 5px;
       position: relative;
       &::after {
@@ -1333,12 +1336,11 @@ display: none;
 .pagination {
   display: flex;
   justify-content: center;
-  padding-top: 100px;
   .pagination__list {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 0 15px;
+    padding-right: 15px;
   }
   &__link {
     padding: 20px;
@@ -1736,15 +1738,100 @@ display: none;
   }
   &__content{
     width: 870px;
-    margin-left: 70px;
+    margin-right: 70px;
   }
+  &__item {
+    margin-bottom: 50px;
+  }
+  &__item-imgbox {
+    width: 830px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  &__item-img {
+    width: 830px;
+    height: 500px;
+    object-fit: cover;
+  }
+  &__item-link-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 275px;
+    height: 70px;
+    background-color: $grey;
+    bottom: 0;
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+  &__item-link-date,
+  &__item-link-admin{
+    display: block;
+    color: #f3f6f8;
+    position: relative;
+    padding-left: 25px;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__item-link-date::before{
+    background-image: url('../images/icon/calendar-white.svg');
+  }
+  &__item-link-admin::before{
+    background-image: url('../images/icon/user-white.svg');
+    width: 20px;
+  }
+
+  &__item-box-title {
+    @extend %rubik-400;
+    font-size: 36px;
+    line-height: 26px;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+
+  &__item-box-text {
+    @extend %rubik-400;
+    color: $title;
+    margin-bottom: 30px;
+  }
+
+  &__item-box-link {
+    padding: 20px 84px 20px 18px;
+    @extend %rubik-700;
+    font-size: 15px;
+    line-height: 12px;
+    background-color: #fff;
+    color: $grey;
+    border: 1px solid $grey;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      background-image: url('../images/icon/gray-arrow.jpg');
+      width: 22px;
+      height: 9px;
+    }
+  }
+
   &__aside {
     width: 270px;
   }
   &__aside-title {
     text-transform: uppercase;
     font-size: 18px;
-    line-height: normal;
+    line-height: 1;
     @extend %dmsan-700;
     color: $title;
     margin-bottom: 25px;
@@ -1761,10 +1848,15 @@ display: none;
     }
   }
   &__search {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
   &__category{
     margin-bottom: 45px;
+  }
+  &__parination {
+    padding-top: 75px;
+    justify-content: flex-start;
+    
   }
 }
 .search {
@@ -1801,7 +1893,7 @@ display: none;
   &__item {
     display: flex;
     & +.recent-posts__item {
-      padding-top: 20px;
+      padding-top: 15px;
     }
   }
   &__link-img {
