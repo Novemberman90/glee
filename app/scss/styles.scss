@@ -1962,8 +1962,11 @@ display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fbfbfb;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     &:hover {
       border: 3px solid $grey;
+      background-color: #fff;
       .contact__item-icon {
         background-color: $grey;
         path{
@@ -1972,6 +1975,7 @@ display: none;
       }
     }
   }
+
   &__item-icon {
     width: 80px;
     height: 80px;
