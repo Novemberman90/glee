@@ -1,0 +1,125 @@
+.articles {
+  padding-top: 115px;
+  padding-bottom: 90px;
+  background-image: url('../images/artcles-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  &__inner {
+    margin-bottom: 88px;
+  }
+
+  &__top-title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  &__title-link {
+    display: inline-block;
+    position: relative;
+    @extend %dmsan-700;
+    font-size: 16px;
+    line-height: 1;
+    padding-right: 15px;
+    color: #243f4d;
+
+    &::after {
+      background-image: url('../images/icon/shape-right.svg');
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 11px;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 370px;
+  }
+
+  &__item-imglink {
+    display: block;
+
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  &__item-box {
+    padding: 30px 30px 25px 30px;
+    position: relative;
+    background-color: #fff;
+  }
+
+  &__item-new {
+    position: absolute;
+    top: -15px;
+    width: 102px;
+    height: 30px;
+    text-align: center;
+    border-radius: 25px;
+    @extend %dmsan-700;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $grey;
+    color: #fff;
+    padding: 5px 13px;
+  }
+
+  &__item-link {
+    color: #262626;
+    font-size: 18px;
+    line-height: 1;
+    @extend %dmsan-500;
+    padding-bottom: 15px;
+    display: block;
+  }
+
+  &__item-info {
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+  }
+
+  &__item-author {
+    padding-right: 30px;
+  }
+
+  &__item-date,
+  &__item-author {
+    font-size: 12px;
+    line-height: 30px;
+    color: #5d6269;
+    @extend %rubik-400;
+    position: relative;
+    padding-left: 30px;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 10px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__item-date::before {
+    background-image: url('../images/icon/time.svg');
+  }
+
+  &__item-author::before {
+    background-image: url('../images/icon/user-gray.svg');
+  }
+}

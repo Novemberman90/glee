@@ -1,0 +1,71 @@
+/* login section */
+.modal {
+  padding-top: 120px;
+  max-width: 475px;
+  margin: 0 auto 120px;
+
+  &__label {
+    display: block;
+    color: #436372;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid #f6f6f6;
+    margin-top: 4px;
+    height: 60px;
+    color: #fff;
+    padding: 0 15px;
+  }
+
+  &__btn-login,
+  &__btn-accoutn {
+    display: block;
+    @extend %rubik-500;
+    font-size: 18px;
+    line-height: normal;
+    padding: 20px 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__btn-login {
+    background-color: $grey;
+    color: #fffefe;
+  }
+
+  &__btn-accoutn {
+    background-color: #fff;
+    border: 1px solid $grey;
+    color: #506571;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    border-bottom: 1px solid #f6f6f6;
+  }
+
+  &__problem {
+    display: inline-block;
+    @extend %rubik-500;
+    font-size: 14px;
+    line-height: 48px;
+    color: #436372;
+  }
+
+  &__noproblem {
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    @extend %rubik-500;
+    color: #436372;
+    margin-bottom: 20px;
+  }
+}

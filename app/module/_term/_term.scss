@@ -1,0 +1,62 @@
+/* term start */
+
+.term {
+  padding-top: 115px;
+
+  &__title {
+    @extend %rubik-500;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    color: #243f4d;
+  }
+
+  &__item {
+    margin-bottom: 75px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    @extend %rubik-400;
+    color: #243f4d;
+  }
+}
+
+.types {
+  &__item-text {
+    @extend %rubik-400;
+    color: #243f4d;
+  }
+
+  &__list {
+    counter-reset: list-numbers;
+    list-style-type: none;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+
+    &::before {
+      counter-increment: list-numbers;
+      content: '0' counter(list-numbers);
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      text-align: left;
+      @extend %rubik-400;
+      color: #243f4d;
+    }
+
+    &:nth-child(n+10)::before {
+      content: counter(list-numbers);
+    }
+  }
+}
+
+/* term end */
