@@ -89,9 +89,10 @@
 
   .footer-bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    min-height: 90px;
 
     &__copy {
       @extend %footer-fotn-style;
@@ -118,5 +119,65 @@
 
     &__nav-link {
       @extend %footer-fotn-style;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    .footer-top {
+      flex-wrap: wrap;
+    &__item-form {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+    }
+  }
+  @media (max-width: 930px) {
+    .footer-top {
+      padding: 50px 0;
+      &__item-form{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+      &__service {
+        margin-right: 50px;
+      }
+      &__account {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .footer-top {
+      &__contact {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .footer-bottom {
+      justify-content: center;
+      &__copy {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .footer-top{
+      &__form {
+        margin-top: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      &__form-input {
+        max-width: 100%;
+        margin-bottom: 5px;
+      }
+      &__form-btn {
+        width: 100%;
+      }
     }
   }

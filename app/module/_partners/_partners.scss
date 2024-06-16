@@ -5,3 +5,14 @@
     align-items: center;
   }
 }
+@media (max-width: 860px) {
+  .partners {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__item {
+      padding: 20px 0;
+    }
+  }
+}

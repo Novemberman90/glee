@@ -1,5 +1,9 @@
 $(function() {
 
+    $('.user-nav__btn').on('click', function() {
+      $('.menu__list').toggleClass('menu__list--active')
+    });
+
     $('.related__slider').slick({
 
         slidesToShow: 4,
@@ -82,7 +86,7 @@ $(function() {
     arrows: false,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
   });
 
 
