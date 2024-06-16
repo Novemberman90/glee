@@ -94,3 +94,22 @@
     }
   }
 }
+
+@media (max-width: 860px) {
+  .commets {
+    width: 100%;
+    .commets__list {
+      & .commets__item:nth-child(2n) {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+}
+@media (max-width: 440px) {
+  .commets {
+    &__img {
+      display: none;
+    }
+  }
+}
