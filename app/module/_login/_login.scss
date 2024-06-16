@@ -69,3 +69,14 @@
     margin-bottom: 20px;
   }
 }
+@media (max-width: 330px) {
+  .modal {
+    &__box {
+      flex-direction: column;
+    }
+    &__label {
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}
