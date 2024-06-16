@@ -60,3 +60,24 @@
 }
 
 /* term end */
+@media (max-width:548px) {
+  .term{
+    &__title {
+      font-size: 22px;
+    }
+    &__item {
+      margin-bottom: 50px;
+    }
+  }
+}
+@media (max-width:330px) {
+  @media (max-width:548px) {
+  .term {
+    padding-top: 80px;
+    &__title {
+      font-size: 22px;
+      line-height: 30px;
+    }
+   }
+  }
+}
