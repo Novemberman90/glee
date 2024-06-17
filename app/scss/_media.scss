@@ -42,6 +42,35 @@
   .filter-category {
     display: none;
   }
+
+  .shop {
+    &__inner {
+      display: block;
+    }
+    &__filter-btn {
+      display: block;
+      border: none;
+      background-color: $grey;
+      padding: 0;
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      left: 0;
+      bottom: 50px;
+      z-index: 11;
+    }
+      &__filters {
+      width: 100%;
+      margin-right: 0;
+      display: none;
+      position: absolute;
+      z-index: 10;
+      top: 20px;
+      left: 0;
+      background-color: #fff;
+      padding: 30px 20px;
+    }
+  }
 }
 @media (max-width: 990px) {
   .blog-page {
@@ -78,6 +107,11 @@
     }
     .blog-page__parination {
       padding-top: 50px;
+    }
+  }
+  .shop {
+    &__parination {
+      padding-top: 70px;
     }
   }
 }

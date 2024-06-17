@@ -38,6 +38,7 @@ button {
 .breacrumbs {
   display: inline-flex;
   justify-content: center;
+  flex-wrap: wrap;
   &__list {
     display: flex;
   }
@@ -144,7 +145,6 @@ button {
     }
   }
 }
-
 @media (max-width: 400px) {
   body {
     font-size: 14px;

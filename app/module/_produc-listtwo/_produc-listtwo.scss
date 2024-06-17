@@ -99,3 +99,32 @@
     }
   }
 }
+@media (max-width: 860px) {
+  .product-item-list {
+    display: block;
+    height: auto;
+    padding: 0 20px;
+    &__box {
+    margin: 50px 0;
+    }
+  }
+}
+@media (max-width:548px) {
+  .product-item-list {
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+    &__title {
+      font-size: 32px;
+    }
+    &__star {
+      margin-bottom: 20px;
+    }
+    &__price {
+      font-size: 26px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+}
