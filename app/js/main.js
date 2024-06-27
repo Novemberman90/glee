@@ -1,12 +1,12 @@
 $(function() {  
 
     $('.user-nav__btn').on('click', function() {
-      $('.menu__list').toggleClass('menu__list--active')
+      $('html').toggleClass('lock');
+      $('.menu__list').toggleClass('menu__list--active');
     });
     $('.shop__filter-btn').on('click', function() {
       $('.shop__filters').slideToggle()
     });
-
 
     $('.related__slider').slick({
 
@@ -50,6 +50,19 @@ $(function() {
 
     });
 
+    $('.button-list').on('click', function() {
+      $('.product-item').addClass('product-item--list')  
+    });
+    $('.button-grid').on('click', function() {
+      $('.product-item').removeClass('product-item--list') 
+    })
+
+    $('.shop-content__filter-btn').on('click', function() {
+      $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');     
+      $(this).addClass('shop-content__filter-btn--active');
+    })
+
+    $('.select-style').styler();
 
     $('.detail-item__numb').styler();
 
@@ -77,15 +90,15 @@ $(function() {
       ],
     });
 
-    $('.product-item-list__btn-card').on('click', function() {
-      $(this).removeClass('product-item-list__btn-card--active');
-      $(this).parent().find('.product-item-list__btn-like').toggleClass('product-item-list__btn-like--active');
-      $(this).parent().find('.product-item-list__btn').toggleClass('product-item-list__btn--active');
+    $('.product-item__list-btn-card').on('click', function() {
+      $(this).removeClass('product-item__list-btn-card--active');
+      $(this).parent().find('.product-item__list-btn-like').toggleClass('product-item__list-btn-like--active');
+      $(this).parent().find('.product-item__list-btn').toggleClass('product-item__list-btn--active');
     });
-    $('.product-item-list__btn').on('click', function() {
-      $(this).removeClass('product-item-list__btn--active');
-      $(this).parent().find('.product-item-list__btn-card').toggleClass('product-item-list__btn-card--active');
-      $(this).parent().find('.product-item-list__btn-like').toggleClass('product-item-list__btn-like--active');
+    $('.product-item__list-btn').on('click', function() {
+      $(this).removeClass('product-item__list-btn--active');
+      $(this).parent().find('.product-item__list-btn-card').toggleClass('product-item__list-btn-card--active');
+      $(this).parent().find('.product-item__list-btn-like').toggleClass('product-item__list-btn-like--active');
     });
 
     $(".star").rateYo({

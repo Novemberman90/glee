@@ -2,16 +2,23 @@ html,
 body {
   height: 100%;
 }
+html {
+  &.lock {
+  overflow: hidden;
+  }
+}
 body {
   font-size: 16px;
   line-height: 30px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
+  color: $title;
 }
 button {
   background-color:transparent;
   border: none;
+  cursor: pointer;
 }
 .main {
   flex-grow: 1;
@@ -81,13 +88,16 @@ button {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-
-  &__img-box {
-    position: relative;
-    margin-top: auto;
+  &.product-item--list {
+    max-width: 100%;
     width: 100%;
-    overflow: hidden;
   }
+    &__img-box {
+      position: relative;
+      margin-top: auto;
+      width: 100%;
+      overflow: hidden;
+    }
 
   &__link-box {
     position: absolute;
