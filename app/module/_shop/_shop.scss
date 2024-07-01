@@ -61,6 +61,42 @@
     color: $title;
     @extend %rubik-400;
   }
+  &__form {
+  .irs--flat .irs-line {
+      top: 12px;
+      height: 3px;
+      background-color: #dfe7ec;
+      border-radius: 0;
+    }
+  
+    .irs--flat .irs-handle {
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background-color: $grey;
+    }
+  
+    .irs--flat .irs-handle>i:first-child {
+      display: none;
+    }
+  
+    .irs--flat .irs-bar {
+      top: 12px;
+      height: 4px;
+      background-color: $grey;
+    }
+  
+    .irs-from,
+    .irs-to,
+    .irs-single {
+      display: none;
+    }
+  
+    .irs--flat .irs-min,
+    .irs--flat .irs-max {
+      display: none;
+    }
+  }
 }
 
 .filter-category {
@@ -102,40 +138,7 @@
 }
 
 
-.irs--flat .irs-line {
-  top: 12px;
-  height: 3px;
-  background-color: #dfe7ec;
-  border-radius: 0;
-}
 
-.irs--flat .irs-handle {
-  top: 6px;
-  width: 16px;
-  height: 16px;
-  background-color: $grey;
-}
-
-.irs--flat .irs-handle>i:first-child {
-  display: none;
-}
-
-.irs--flat .irs-bar {
-  top: 12px;
-  height: 4px;
-  background-color: $grey;
-}
-
-.irs-from,
-.irs-to,
-.irs-single {
-  display: none;
-}
-
-.irs--flat .irs-min,
-.irs--flat .irs-max {
-  display: none;
-}
 
 
 .filter-brand {

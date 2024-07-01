@@ -53,6 +53,87 @@
     display: flex;
     justify-content: space-between;
     max-width: 380px;
+    .jq-number__field {
+        width: 150px;
+        text-align: center;
+        border: 1px solid $grey;
+      }
+    
+      .jq-number__field input {
+        width: 50px;
+        height: 50px;
+        border-left: 1px solid $grey;
+        border-right: 1px solid $grey;
+        border-bottom: none;
+        border-top: none;
+        outline: none;
+        background: none;
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #5c5c5c;
+      }
+    
+      .jq-number {
+        padding: 0;
+        position: relative;
+        border: 1px solid $grey;
+      }
+    
+      .jq-number__spin {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        text-shadow: none;
+        cursor: pointer;
+      }
+    
+      .minus,
+      .plus {
+        width: 50px;
+        height: 50px;
+      }
+    
+      .plus {
+        left: auto;
+      }
+    
+      .jq-number__spin::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        right: 0;
+        background-color: #000;
+        width: 10px;
+        height: 1px;
+      }
+    
+      .jq-number__spin.plus::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #000;
+        width: 1px;
+        height: 10px;
+      }
+    
+      .jq-number__spin.minus:after {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
   }
 
   &__btn {
@@ -70,87 +151,6 @@
   }
 }
 
-.jq-number__field {
-  width: 150px;
-  text-align: center;
-  border: 1px solid $grey;
-}
-
-.jq-number__field input {
-  width: 50px;
-  height: 50px;
-  border-left: 1px solid $grey;
-  border-right: 1px solid $grey;
-  border-bottom: none;
-  border-top: none;
-  outline: none;
-  background: none;
-  @extend %rubik-400;
-  font-size: 16px;
-  line-height: 30px;
-  text-align: center;
-  color: #5c5c5c;
-}
-
-.jq-number {
-  padding: 0;
-  position: relative;
-  border: 1px solid $grey;
-}
-
-.jq-number__spin {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  text-shadow: none;
-  cursor: pointer;
-}
-
-.minus,
-.plus {
-  width: 50px;
-  height: 50px;
-}
-
-.plus {
-  left: auto;
-}
-
-.jq-number__spin::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  right: 0;
-  background-color: #000;
-  width: 10px;
-  height: 1px;
-}
-
-.jq-number__spin.plus::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #000;
-  width: 1px;
-  height: 10px;
-}
-
-.jq-number__spin.minus:after {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 
 
 .detail-info {
